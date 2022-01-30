@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+//import stock.example.stockMaintain.pojo.*;
+
 @RestController
 @RequestMapping(value = "/api/stock")
 public class StockRestController {
@@ -27,6 +29,17 @@ public class StockRestController {
 		return new RestTemplate();
 	}
 
+	
+//	@GetMapping(value = "/getpaymentdetail")
+//	public PaymentPojo getPaymentDetail() {
+//
+//		PaymentPojo paymentPojo = new PaymentPojo();
+//		paymentPojo.setPaymentId(123);
+//		paymentPojo.setPaymentAmount(300000);
+//		paymentPojo.setPaymentType("Cash");
+//
+//		return paymentPojo;
+//	}
 	
 	@GetMapping(value = "/getStockDetail")
 	public ResponseEntity<String> welcome() {
